@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Appointments</title>
+    <title>Feedback</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -20,85 +20,77 @@
                 <li class="nav-item">
                     <a class="nav-link" href="properties.html">Properties</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="appointments.html">Appointments</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="agents.html">Agents</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="feedback.html">Feedback</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-
     <!-- Main content -->
     <div class="container mt-4">
-        <h1>Appointments</h1>
-        <!-- View appointments and appointment creation form -->
+        <h1>Feedback</h1>
+        <!-- View feedback and feedback submission form -->
         <div class="row">
             <div class="col-md-6">
-                <h3>List of Appointments</h3>
+                <h3>List of Feedback</h3>
                 <table class="table">
                     <thead>
                         <tr>
+                            <th>Feedback ID</th>
                             <th>Appointment ID</th>
-                            <th>Property</th>
-                            <th>Agent</th>
-                            <th>Date</th>
-                            <th>Status</th>
+                            <th>Comments</th>
+                            <th>Rating</th>
+                            <th>Feedback Date</th>
                             <!-- Add more columns if needed -->
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Sample appointment row -->
+                        <!-- Sample feedback row -->
                         <tr>
                             <td>1</td>
-                            <td>Sample Property</td>
-                            <td>Agent Smith</td>
+                            <td>1</td>
+                            <td>Great property!</td>
+                            <td>5/5</td>
                             <td>2023-11-17</td>
-                            <td>Scheduled</td>
                             <!-- Add more columns if needed -->
                         </tr>
-                        <!-- Iterate through appointments and display here -->
+                        <!-- Iterate through feedback and display here -->
                     </tbody>
                 </table>
             </div>
             <div class="col-md-6">
-                <!-- Appointment creation form -->
-                <h3>Create New Appointment</h3>
+                <!-- Feedback submission form -->
+                <h3>Leave Feedback</h3>
                 <form>
                     <div class="form-group">
-                        <label for="propertySelect">Select Property</label>
-                        <select class="form-control" id="propertySelect">
-                            <!-- Options populated with available properties -->
-                            <option value="property1">Property 1</option>
-                            <option value="property2">Property 2</option>
-                            <!-- Add more options dynamically from backend -->
-                        </select>
+                        <label for="appointmentID">Appointment ID</label>
+                        <input type="text" class="form-control" id="appointmentID" placeholder="Enter Appointment ID">
                     </div>
                     <div class="form-group">
-                        <label for="agentSelect">Select Agent</label>
-                        <select class="form-control" id="agentSelect">
-                            <!-- Options populated with available agents -->
-                            <option value="agent1">Agent 1</option>
-                            <option value="agent2">Agent 2</option>
-                            <!-- Add more options dynamically from backend -->
-                        </select>
+                        <label for="feedbackComments">Comments</label>
+                        <textarea class="form-control" id="feedbackComments" rows="3" placeholder="Enter Comments"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="appointmentDate">Appointment Date</label>
-                        <input type="date" class="form-control" id="appointmentDate">
+                        <label for="feedbackRating">Rating</label>
+                        <input type="number" class="form-control" id="feedbackRating" min="1" max="5" placeholder="Enter Rating">
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackDate">Feedback Date</label>
+                        <input type="date" class="form-control" id="feedbackDate">
                     </div>
                     <!-- Add more fields as needed -->
-                    <button type="submit" class="btn btn-primary">Create Appointment</button>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
                 </form>
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
