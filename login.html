@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Login</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -30,41 +30,43 @@
                     <a class="nav-link" href="feedback.html">Feedback</a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.html"><button class="btn btn-success"> Login</button></a>
+                    <button class="btn btn-success"> Login</button>
                 </li>
             </ul>
         </nav>
     </header>
 
-
+    <!-- Main content -->
     <div class="container mt-4">
-        <h1>Registration</h1>
-        <!-- Registration form -->
+        <h1>Login</h1>
+        <!-- Login form -->
         <div class="row">
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter Username">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Enter Password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <div class="form-group">
+                        <label>Login As:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="loginType" id="loginUser" value="user">
+                            <label class="form-check-label" for="loginUser">User</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="loginType" id="loginAdmin" value="admin">
+                            <label class="form-check-label" for="loginAdmin">Admin</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
         </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
